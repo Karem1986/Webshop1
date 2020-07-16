@@ -1,6 +1,6 @@
 {
-  "name": "webshop1",
-  "version": "1.0.0",
+  "name": "webshop",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
