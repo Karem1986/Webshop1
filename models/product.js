@@ -11,12 +11,16 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      product.belongsTo(models.category)
+      product.belongsToMany(models.customer, {
+        through: "orders", //as name of the table
+        foreignKey: "productId", //Example at:https://reader.codaisseur.com/courses/backend-bootcamp/02-orm/relations/many-to-many
+      })
     }
   };
   product.init({
-    id: DataTypes.INTEGER,
-    description: DataTypes.STRING,
-    imageurl: DataTypes.STRING
+    description: DataTypes.TEXT, //THEY unlimited characters
+    imageurl: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'product',

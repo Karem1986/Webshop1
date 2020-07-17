@@ -11,10 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      customer.belongsToMany(models.product, { //example at:https://reader.codaisseur.com/courses/backend-bootcamp/02-orm/relations/many-to-many
+        through: "orders",
+        foreignKey: "customerId",
+      }) //because a customer can order many 
+      //products and a product can be ordered by many customers that is why is many to many
     }
   };
   customer.init({
-    id: DataTypes.INTEGER,
     name: DataTypes.STRING,
     lastName: DataTypes.STRING,
     address: DataTypes.STRING,

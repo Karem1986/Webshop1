@@ -1,4 +1,7 @@
 'use strict';
+
+const order = require("../models/order");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('customers', {
@@ -8,9 +11,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      id: {
-        type: Sequelize.INTEGER
-      },
+
       name: {
         type: Sequelize.STRING
       },
