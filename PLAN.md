@@ -44,16 +44,24 @@ database (REST routes)
 //ROUTES GET/POST as in https://reader.codaisseur.com/courses/backend-bootcamp/04-advanced-apis/02-rest
 1. Create a folder "routers" [x]
 2. Inside create files according to our data: 
-- products.js []
-- categories.js
+- products.js [x]
+- categories.js []
 - orders.js 
-3. Inside those files:
+3. Inside those files: [x]
 -- Import the Router class from express.
 -- Import the corresponding model.
 -- Instantiate a router.
 -- Register a GET / route that responds with all the images/users.
 -- Export the router.
 4. Index.js do the following: 
+- Export parser middleware before routes [x]
+-- set up routes with app.use [x]
+
+5. Login and authentication--https://reader.codaisseur.com/courses/backend-bootcamp/04-advanced-apis/04-jwt
+
+
+
+
 
 
 
