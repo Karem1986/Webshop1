@@ -11,6 +11,8 @@ const Order = require("./models").order;
 const products = require("./routers/products")
 const categories = require("./routers/categories")
 const customers = require("./routers/customers")
+//Login:
+const login = require("./routers/auth") //imports auth.js here for login
 
 //Start a simple express server:
 //Gets all customers
@@ -61,5 +63,8 @@ app.use(jsonParser);
 app.use("/products", products)
 app.use("/categories", categories)//gets all products from product.js route 
 app.use("/customers", customers)//gets all customers from customers.js 
+//LOGIN 
+app.use("/login", login)
+
 
 app.listen(PORT, () => console.log("server running!"));

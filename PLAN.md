@@ -14,7 +14,7 @@
 [x] model & migration
 
 Add Relationships(separate migration)
-1. Write a migration to add the foreign keys[x] //Model is in plural!!!
+1. Write a migration to add the foreign keys[x] //Model is in plural in migration files!!!
 2. Add the relations to our sequelize models:
 > Product belongsTo order
 >Orders hasMany products-->productId on orders[x]
@@ -45,8 +45,8 @@ database (REST routes)
 1. Create a folder "routers" [x]
 2. Inside create files according to our data: 
 - products.js [x]
-- categories.js []
-- orders.js 
+- categories.js [x]
+- customers.js [x]
 3. Inside those files: [x]
 -- Import the Router class from express.
 -- Import the corresponding model.
@@ -57,8 +57,9 @@ database (REST routes)
 - Export parser middleware before routes [x]
 -- set up routes with app.use [x]
 
-5. Login and authentication--https://reader.codaisseur.com/courses/backend-bootcamp/04-advanced-apis/04-jwt
-
+5. Login and authentication--https://reader.codaisseur.com/courses/backend-bootcamp/04-advanced-apis/04-jwt 
+--Hash passwords for customers [x]
+--Finalize login endpoint [] https://reader.codaisseur.com/courses/backend-bootcamp/04-advanced-apis/07-login 
 
 
 
