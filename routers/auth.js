@@ -88,7 +88,7 @@ router.post("/", async (req, res, next) => { //login request
     } catch (e) {
         console.log(e)
     }
-
+    //Tested with http POST :4005/login name="sara" email="hi" password=b
 });
 
 module.exports = router 
