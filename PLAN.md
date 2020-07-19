@@ -1,5 +1,5 @@
 -Product 
-[x] model & migration //Migration files have the model name in plural!!!
+[x] model & migration//Migration files have the model name in plural!!!
 
 
 -Category
@@ -10,12 +10,13 @@
 [x] model & migration
 
 
--Order
+-Order-Join table
 [x] model & migration
 
 Add Relationships(separate migration)
-1. Write a migration to add the foreign keys[x] //Model is in plural in migration files!!!
-2. Add the relations to our sequelize models:
+1. Write a migration to add the foreign keys[x] 
+2. RUN MIGRATION db migrate 
+3. Add the relations to our sequelize models in the relations file and models
 > Product belongsTo order
 >Orders hasMany products-->productId on orders[x]
 > Customer hasMany orders-->userId on Orders[x]
@@ -59,7 +60,7 @@ database (REST routes)
 
 5. Login and authentication--https://reader.codaisseur.com/courses/backend-bootcamp/04-advanced-apis/04-jwt 
 --Hash passwords for customers [x]
---Finalize login endpoint [] https://reader.codaisseur.com/courses/backend-bootcamp/04-advanced-apis/07-login 
+--Finalize login endpoint [x] https://reader.codaisseur.com/courses/backend-bootcamp/04-advanced-apis/07-login 
 
 
 

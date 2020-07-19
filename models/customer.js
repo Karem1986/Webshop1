@@ -14,8 +14,9 @@ module.exports = (sequelize, DataTypes) => {
       customer.belongsToMany(models.product, { //example at:https://reader.codaisseur.com/courses/backend-bootcamp/02-orm/relations/many-to-many
         through: "orders",
         foreignKey: "customerId",
-      }) //because a customer can order many 
-      //products and a product can be ordered by many customers that is why is many to many
+      }) //A customer can order many 
+      //products and a product can be ordered by many customers
+      // that is why is belongs to many
     }
   };
   customer.init({

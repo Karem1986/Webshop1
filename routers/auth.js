@@ -5,24 +5,24 @@ const Customer = require("../models").customer;
 
 const router = new Router()
 
-// router.post('/', async (req, res, next) => {
-//     // Here goes the login logic.
-//     try {
-//         //Check for email and password in the json body, allow anybody
-//         //to login and receive a jwt:
-//         const { email, password } = req.body
-//         // console.log('hi')
-//         if (!email || !password) {
-//             res.status(400).send("Please supply a valid email and password")
-//         } else {
-//             res.send({
-//                 jwt: toJWT({ userId: 1 }),
-//             })
-//         }
-//     } catch (e) {
-//         next(e)
-//     }
-// })
+router.post('/', async (req, res, next) => {
+    // Here goes the login logic.
+    try {
+        //Check for email and password in the json body, allow anybody
+        //to login and receive a jwt:
+        const { email, password } = req.body
+        // console.log('hi')
+        if (!email || !password) {
+            res.status(400).send("Please supply a valid email and password")
+        } else {
+            res.send({
+                jwt: toJWT({ userId: 1 }),
+            })
+        }
+    } catch (e) {
+        next(e)
+    }
+})
 //Sign-up 
 router.post("/signup", async (req, res, next) => {
     try {

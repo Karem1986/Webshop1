@@ -3,6 +3,7 @@
 const express = require("express");
 const PORT = 4005;
 const app = express();
+//Our models to test the express server
 const Product = require("./models").product;
 const Category = require("./models").category;
 const Customer = require("./models").customer;
@@ -61,7 +62,7 @@ const jsonParser = express.json();
 app.use(jsonParser);
 //2Register routes here
 app.use("/products", products)
-app.use("/categories", categories)//gets all products from product.js route 
+app.use("/categories", categories)//gets all categories from product.js route 
 app.use("/customers", customers)//gets all customers from customers.js 
 //LOGIN 
 app.use("/login", login)

@@ -5,7 +5,7 @@ module.exports = {
     await queryInterface.addColumn("orders", "productId", {
       type: Sequelize.INTEGER,
       references: {
-        model: "products", //always the name here of model plural 
+        model: "products", //always the name here of model in plural 
         key: "id",
       },
       onUpdate: "CASCADE",
